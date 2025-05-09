@@ -1,7 +1,17 @@
-import "./index.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Ingredients from "./pages/Ingredients";
 
 const App = () => {
-  return <h1 className="text-9xl">Hello</h1>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ingredients" element={<Ingredients />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
